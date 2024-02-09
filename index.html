@@ -151,7 +151,7 @@
             <div class="tile-content">
                 <p>Lecturer Name: </p>
                 <p>Time(online): 03:30pm</p>
-                <p>Link: <a href="">Here</a>
+                <p>Link: <a href="no">Here</a>
                 </p>
             </div>
         </div>
@@ -178,6 +178,16 @@
                     //use sweetalert2
                     Swal.fire({
                         title: 'Link will be updated soon',
+                        icon: 'info',
+                        confirmButtonText: 'OK'
+                    });
+                }
+                else if (a.getAttribute('href') === 'no') {
+                    e.preventDefault();
+                    // alert('Tutorial will not be contacted');
+                    //use sweetalert2
+                    Swal.fire({
+                        title: 'Tutorial will not be contacted',
                         icon: 'info',
                         confirmButtonText: 'OK'
                     });
