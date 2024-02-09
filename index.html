@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/source/download.jpg" type="image/x-icon">
     <title>Lecture-details</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         header {
             background-color: #c1d3c2;
@@ -167,6 +168,23 @@
             </div>
         </div>
     </main>
+    <script>
+        //if href is empty, then show an on screen alert with a message saying "Link will be updated soon"  and prevent the default action of the link
+        document.querySelectorAll('.tile a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (a.getAttribute('href') === '') {
+                    e.preventDefault();
+                    // alert('Link will be updated soon');
+                    //use sweetalert2
+                    Swal.fire({
+                        title: 'Link will be updated soon',
+                        icon: 'info',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
