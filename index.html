@@ -73,6 +73,22 @@
             animation-delay: 7.5s;
         }
 
+        .new-time-table{
+            background-color: #c1d3c2;
+            color: rgb(5, 5, 5);
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10px;
+            width: calc(100% - 40px);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
@@ -84,7 +100,16 @@
                 font-size: 15px;
             }
         }
+
+        @media (max-width: 600px) {
+            .new-time-table {
+                width: calc(100% - 40px);
+                font-size: 15px;
+            }
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -102,6 +127,16 @@
     </div>
 
     <main>
+
+        <div class="new-time-table">
+            <div class="tile-header">
+                <h1>New Time Table</h1>
+            </div>
+            <div class="tile-content">
+                <p>View: <a href="/source/timetable.html">Here (version 3) </a>
+                </p>
+                </div>
+        </div>
 
         <div class="dms tile">
             <div class="tile-header">
